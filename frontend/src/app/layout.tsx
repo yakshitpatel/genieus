@@ -75,13 +75,15 @@ export default function RootLayout({
               url: "https://genieus.studio",
               logo: "https://genieus.studio/images/logo.png",
               sameAs: [
-                "https://x.com/CoatingsExcel",
-                "https://www.facebook.com/excel.coolroofcoating",
-                "https://www.instagram.com/excelcoatings_india/",
-                "https://www.linkedin.com/company/excel-coatings/",
+                "https://x.com/genieusstudio",
+                "https://www.instagram.com/genieusstudio/",
+                "https://www.linkedin.com/company/genieus-studio/",
               ],
             })}
         </script>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/brand/fevicon-dark.png" />
+        <link rel="icon" type="image/png" href="/brand/fevicon-light.png" media="(prefers-color-scheme: dark)" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
