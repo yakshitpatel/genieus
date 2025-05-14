@@ -1,6 +1,18 @@
 'use client'
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Coming Soon | Genieus Studio",
+  description: "Your global strategic design and branding partner, transforming ideas into impactful brands.",
+  keywords: ["Branding", "Design Studio", "Genieus Studio", "Web Design"],
+  openGraph: {
+    title: "Coming Soon | Genieus Studio",
+    description: "Your global strategic design and branding partner, transforming ideas into impactful brands.",
+    images: "/brand/genieus-logo-white.png",
+  },
+};
 
 const launchDate = new Date('2025-05-19T00:00:00');
 
