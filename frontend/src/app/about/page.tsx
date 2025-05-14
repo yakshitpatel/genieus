@@ -1,5 +1,7 @@
 // src/app/about/page.tsx
-export const metadata = {
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
     title: "About Genieus Studio | Creative Design & Branding",
     description:
       "Learn about Genieus Studio, your global partner for design and branding. We transform ideas into impactful brands.",
@@ -17,4 +19,13 @@ export const metadata = {
         },
       ],
     },
-  };
+};
+
+export default function AboutPage() {
+  return (
+    <main>
+      <h1>About Genieus Studio</h1>
+      {/* Add your about page content here */}
+    </main>
+  );
+}
