@@ -1,6 +1,18 @@
 'use client'
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Coming Soon | Genieus Studio",
+  description: "Your global strategic design and branding partner, transforming ideas into impactful brands.",
+  keywords: ["Branding", "Design Studio", "Genieus Studio", "Web Design"],
+  openGraph: {
+    title: "Coming Soon | Genieus Studio",
+    description: "Your global strategic design and branding partner, transforming ideas into impactful brands.",
+    images: "/brand/genieus-logo-white.png",
+  },
+};
 
 const launchDate = new Date('2025-05-19T00:00:00');
 
@@ -93,7 +105,7 @@ export default function ComingSoon() {
             <h2 className="text-2xl font-bold mb-4 text-black">Get Notified</h2>
             {submitted ? (
               <div className="text-black text-center">
-                Thank you! We'll notify you on launch.
+                Thank you! We&apos;ll notify you on launch.
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="w-full flex flex-col items-center">

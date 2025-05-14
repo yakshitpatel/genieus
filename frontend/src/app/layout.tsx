@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -67,6 +68,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Schema.org JSON-LD */}
         <script type="application/ld+json">
           {JSON.stringify({
               "@context": "https://schema.org",
@@ -75,15 +77,31 @@ export default function RootLayout({
               url: "https://genieus.studio",
               logo: "https://genieus.studio/images/logo.png",
               sameAs: [
-                "https://x.com/genieusstudio",
+                "https://twitter.com/genieusstudio",
                 "https://www.instagram.com/genieusstudio/",
                 "https://www.linkedin.com/company/genieus-studio/",
               ],
             })}
         </script>
+        {/* Google Analytics Script */}
+        <Script 
+          async 
+          src="https://www.googletagmanager.com/gtag/js?id=G-8XBK3RVJYD"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8XBK3RVJYD', { 
+              anonymize_ip: true 
+            });
+          `}
+        </Script>
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" href="/brand/fevicon-dark.png" />
         <link rel="icon" type="image/png" href="/brand/fevicon-light.png" media="(prefers-color-scheme: dark)" />
+        <link rel="canonical" href="https://genieus.studio" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
