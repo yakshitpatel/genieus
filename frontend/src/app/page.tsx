@@ -93,7 +93,7 @@ export default function ComingSoon() {
             <h2 className="text-2xl font-bold mb-4 text-black">Get Notified</h2>
             {submitted ? (
               <div className="text-black text-center">
-                Thank you! We'll notify you on launch.
+                Thank you! We&apos;ll notify you on launch.
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="w-full flex flex-col items-center">
