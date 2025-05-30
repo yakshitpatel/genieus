@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Britti Sans';
+  src: url('/fonts/britti-sans-variable.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: theme('colors.neutral.50');
+  --foreground: theme('colors.black');
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: theme('colors.neutral.900');
+    --foreground: theme('colors.white');
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-britti-sans), Arial, Helvetica, sans-serif;
+}
+
+.stroke-path {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.group:hover .stroke-path {
+  stroke-dashoffset: 0;
+}
+
+.nav-active .stroke-path {
+  stroke-dashoffset: 0;
+  color: theme('colors.black');
+}
